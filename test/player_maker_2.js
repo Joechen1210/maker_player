@@ -130,8 +130,13 @@
    for(time in settings) {
       var pointtime = time/duration;
        makerpoint = document.createElement('div');
-       makerpoint.className = 'vjs-makerpoint-' + time;
-       progressControl.el().appendChild(makerpoint);
+       makerpoint.className = 'vjs-makerpoint';
+       progressControl.el().appeendChild(makerpoint);
+       makepoint.onmouseup = function()
+       {
+         player.currentTime(time);
+         paler.play();
+       }
      }
    
     moveListener = function(event) {
