@@ -131,7 +131,7 @@
       var pointtime = time/duration;
        makerpoint = document.createElement('div');
        makerpoint.className = 'vjs-makerpoint';
-       progressControl.el().appeendChild(makerpoint);
+       progressControl.el().appendChild(makerpoint);
      }
 
     moveListener = function(event) {
