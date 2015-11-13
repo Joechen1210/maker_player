@@ -1,4 +1,9 @@
 /* a wrapper element that tracks the mouse vertically */
+.vjs-makerpoint-0{
+  width: 3px;
+  height: 3px;
+}
+
 .vjs-thumbnail-holder {
   position: absolute;
   left: -1000px;
