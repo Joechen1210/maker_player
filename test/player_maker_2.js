@@ -73,7 +73,7 @@
     var div, settings, img, player, progressControl, duration, moveListener, moveCancel;
     settings = extend({}, defaults, options);
     player = this;
-    
+
     (function() {
       var progressControl, addFakeActive, removeFakeActive;
       // Android doesn't support :active and :hover on non-anchor and non-button elements
@@ -93,7 +93,7 @@
         progressControl.on('touchcancel', removeFakeActive);
       }
     })();
-    
+
     // create the thumbnail
     div = document.createElement('div');
     div.className = 'vjs-thumbnail-holder';
@@ -126,7 +126,7 @@
     // add the thumbnail to the player
     progressControl = player.controlBar.progressControl;
     progressControl.el().appendChild(div);
-   
+
     moveListener = function(event) {
       var mouseTime, time, active, left, setting, pageX, right, width, halfWidth, pageXOffset, clientRect;
       active = 0;
