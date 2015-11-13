@@ -127,13 +127,13 @@
     progressControl = player.controlBar.progressControl;
     progressControl.el().appendChild(div);
     
-    var progressbar = document.getelementsbyclassname('vjs-load-progress');
+    //var progressbar = document.getelementsbyclassname('vjs-load-progress');
     
      for(time in settings) {
       var pointtime = time/duration;
        makerpoint = document.createElement('div');
        makerpoint.className = 'vjs-makerpoint-' + time;
-       progressbar.el().appendChild(makerpoint);
+       progressControl.el().appendChild(makerpoint);
      }
    
     moveListener = function(event) {
