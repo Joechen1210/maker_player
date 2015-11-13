@@ -132,11 +132,6 @@
        makerpoint = document.createElement('div');
        makerpoint.className = 'vjs-makerpoint';
        progressControl.el().appeendChild(makerpoint);
-       makerpoint.onmouseup = function()
-       {
-         player.currentTime(time);
-         player.play();
-       }
      }
    
     moveListener = function(event) {
