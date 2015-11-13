@@ -126,12 +126,14 @@
     // add the thumbnail to the player
     progressControl = player.controlBar.progressControl;
     progressControl.el().appendChild(div);
-
+    
+    var progressbar = document.getelementsbyclassname('vjs-load-progress');
+    
      for(time in settings) {
       var pointtime = time/duration;
        makerpoint = document.createElement('div');
        makerpoint.className = 'vjs-makerpoint-' + time;
-       progressControl.el().appendChild(makerpoint);
+       progressbar.el().appendChild(makerpoint);
      }
    
     moveListener = function(event) {
