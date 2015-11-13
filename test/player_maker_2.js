@@ -73,7 +73,37 @@
     var div, settings, img, player, progressControl, duration, moveListener, moveCancel;
     settings = extend({}, defaults, options);
     player = this;
+    makerevent;
+    
+    makerevent = function(player, settings) {
 
+    progressControl = player.controlBar.progressControl;
+    clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
+    right = (clientRect.width || clientRect.right) + pageXOffset;
+    left = progressControl.el()).getBoundingClientRect().left
+    
+     duration = player.duration();
+    
+    // when the container is MP4
+      player.on('durationchange', function(event) {
+      duration = player.duration();
+      });
+
+    // when the container is HLS
+      player.on('loadedmetadata', function(event) {
+      duration = player.duration();
+      });
+     
+     for(time in settings) {
+      var pointtime = time/duration;
+       makerpoint = document.createElement('div');
+       makerpoint.className = 'vjs-makerpoint-' + time;
+       progressControl.el().appendChild(makerpoint);
+     }
+    }
+    
+    
+    
     (function() {
       var progressControl, addFakeActive, removeFakeActive;
       // Android doesn't support :active and :hover on non-anchor and non-button elements
@@ -93,7 +123,7 @@
         progressControl.on('touchcancel', removeFakeActive);
       }
     })();
-
+    
     // create the thumbnail
     div = document.createElement('div');
     div.className = 'vjs-thumbnail-holder';
