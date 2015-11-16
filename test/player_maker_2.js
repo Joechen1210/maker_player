@@ -141,7 +141,7 @@
 
     clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
     right = (clientRect.width || clientRect.right) + pageXOffset;
-    time = (8/28)*100;
+    time = (8/29)*100;
     crright = Math.floor(clientRect.width*time);
     
     makerpoint.style.left = time + '%';
