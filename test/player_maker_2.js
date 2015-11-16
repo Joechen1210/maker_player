@@ -70,7 +70,7 @@
    * register the thubmnails plugin
    */
   videojs.plugin('thumbnails', function(options) {
-    var div, settings, img, player, progressControl, duration, moveListener, moveCancel;
+    var div, settings, img, player, progressControl, duration, moveListener, moveCancel, du, num, time, crright;
     settings = extend({}, defaults, options);
     player = this;
     progressControl = player.controlBar.progressControl;
@@ -141,10 +141,10 @@
 
     clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
     right = (clientRect.width || clientRect.right) + pageXOffset;
-    var du = player.duration();
-    var time = 8;
-    var num = time*2;
-    var crright = parseInt(right,10);
+    du = player.duration();
+    time = 8;
+    num = time*2;
+    crright = parseInt(right,10);
     
     //makerpoint.style.left = progressControl.style.width + 'px';
     makerpoint.onclick = function()
