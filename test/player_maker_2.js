@@ -143,7 +143,7 @@
     right = (clientRect.width || clientRect.right) + pageXOffset;
     var num = 8 / duration * clientRect.width;
     
-    makerpoint.style.left = right;
+    makerpoint.style.left = right + num ;
     
     // add the thumbnail to the player
     
