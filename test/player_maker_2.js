@@ -141,7 +141,7 @@
     var sec_num = parseInt(duration, 10);
     makerpoint.style.left = time + '%';
     
-    var dutext = document.getElementsByClassName("vjs-duration-display").content;
+    var dutext = document.getElementsByClassName("vjs-duration vjs-time-controls vjs-control").innerText;
     
     makerpoint.onclick = function()
     {
