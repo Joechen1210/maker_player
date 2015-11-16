@@ -121,6 +121,7 @@
 
     // keep track of the duration to calculate correct thumbnail to display
     duration = player.duration();
+    du =  player.duration();
     
     // when the container is MP4
     player.on('durationchange', function(event) {
@@ -145,7 +146,7 @@
     {
       player.currentTime(8);
       x.innerHTML = "0.08";
-       alert("  duration: " + duration + "  du: " + time2 + "  sec: " + sec_num);
+       alert("  duration: " + duration + "  du: " + du + "  sec: " + sec_num);
       //player.play();
     }
     
