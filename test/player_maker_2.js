@@ -143,7 +143,7 @@
     //right = (clientRect.width || clientRect.right) + pageXOffset;
     //var num = 8 / duration * clientRect.width;
     
-    makerpoint.style.left = progressControl.el().width;
+    makerpoint.style.left = progressControl.el().style.width + 'px';
     
     // add the thumbnail to the player
     
