@@ -140,9 +140,10 @@
     });
 
     clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
+    right = (clientRect.width || clientRect.right) + pageXOffset;
     var num = 8 / duration * clientRect.width;
     
-    makerpoint.style.left = "10px";
+    makerpoint.style.left = right;
     
     // add the thumbnail to the player
     
