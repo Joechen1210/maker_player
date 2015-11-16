@@ -137,7 +137,7 @@
     time = (8/29)*100;
     crright = Math.floor(clientRect.width*time);
     time2 = (8/duration)*100;
-    
+    var sec_num = parseInt(duration, 10);
     makerpoint.style.left = time + '%';
     
     
@@ -145,7 +145,7 @@
     {
       player.currentTime(8);
       x.innerHTML = "0.08";
-       alert("  duration: " + duration + "  du: " + time2);
+       alert("  duration: " + duration + "  du: " + time2 + "  sec: " + sec_num);
       //player.play();
     }
     
