@@ -112,12 +112,12 @@
     
     var x = document.getElementsByClassName("vjs-current-time-display");
     
-    makerpoint.onclick = function()
+    /*makerpoint.onclick = function()
     {
       player.currentTime(8);
       x.innerHTML = "0.08";
       player.play();
-    }
+    }*/
     
     // center the thumbnail over the cursor if an offset wasn't provided
     if (!img.style.left && !img.style.right) {
@@ -139,12 +139,15 @@
       duration = player.duration();
     });
 
-    //clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
-    //right = (clientRect.width || clientRect.right) + pageXOffset;
-    //var num = 8 / duration * clientRect.width;
+    clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
+    right = (clientRect.width || clientRect.right) + pageXOffset;
+    var num = 8 / duration * clientRect.width;
     
-    makerpoint.style.left = progressControl.style.width + 'px';
-    
+    //makerpoint.style.left = progressControl.style.width + 'px';
+    makerpoint.onclick = function()
+    {
+      alert("width: " + clientRect.width + "  height: " + clientRect.height + "  right: " + clientRect.right + "  left: " + clientRect.left + "  time: " + time + "  duration: " + duration);
+    }
     // add the thumbnail to the player
     
     progressControl.el().appendChild(div);
