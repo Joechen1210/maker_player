@@ -146,7 +146,7 @@
     //makerpoint.style.left = progressControl.style.width + 'px';
     makerpoint.onclick = function()
     {
-      alert("width: " + clientRect.width + "  height: " + clientRect.height + "  right: " + clientRect.right + "  left: " + clientRect.left + "  time: " + time + "  duration: " + duration);
+      alert("width: " + clientRect.width + "  height: " + clientRect.height + "  right: " + clientRect.right + "  left: " + clientRect.left + "  time: " + settings.time + "  duration: " + duration);
     }
     // add the thumbnail to the player
     
