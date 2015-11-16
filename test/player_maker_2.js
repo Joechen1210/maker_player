@@ -111,14 +111,7 @@
     //makerpoint.appendChild(makerbt);
     
     var x = document.getElementsByClassName("vjs-current-time-display");
-    
-    makerpoint.onclick = function()
-    {
-      player.currentTime(8);
-      x.innerHTML = "0.08";
-      player.play();
-    }
-    
+  
     // center the thumbnail over the cursor if an offset wasn't provided
     if (!img.style.left && !img.style.right) {
       img.onload = function() {
@@ -143,8 +136,19 @@
     right = (clientRect.width || clientRect.right) + pageXOffset;
     time = (8/29)*100;
     crright = Math.floor(clientRect.width*time);
+    time2 = (8/duration)*100;
     
     makerpoint.style.left = time + '%';
+    
+    
+    makerpoint.onclick = function()
+    {
+      player.currentTime(8);
+      x.innerHTML = "0.08";
+       alert("  duration: " + duration + "  du: " + time2);
+      //player.play();
+    }
+    
    // makerpoint.onclick = function()
   //  {
     //  alert("width: " + clientRect.width + "  height: " + clientRect.height + "  right: " + clientRect.right + "  left: " + clientRect.left + "  crright: " + crright + "  num: " + num + "  duration: " + typeof(duration) + "  du: " + du);
