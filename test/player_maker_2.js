@@ -141,13 +141,14 @@
 
     clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
     right = (clientRect.width || clientRect.right) + pageXOffset;
-    var num = (8/duration),
-    crright = parseInt(right);
+    var du = Math.floor(duration); 
+    num = 8 / du,
+    crright = parseInt(right,10);
     
     //makerpoint.style.left = progressControl.style.width + 'px';
     makerpoint.onclick = function()
     {
-      alert("width: " + clientRect.width + "  height: " + clientRect.height + "  right: " + clientRect.right + "  left: " + clientRect.left + "  num: " + num + "  duration: " + duration);
+      alert("width: " + clientRect.width + "  height: " + clientRect.height + "  right: " + clientRect.right + "  left: " + clientRect.left + "  crright: " + crright + "  num: " + num + "  duration: " + du);
     }
     // add the thumbnail to the player
     
