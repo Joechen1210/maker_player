@@ -143,7 +143,7 @@
     right = (clientRect.width || clientRect.right) + pageXOffset;
     du = duration;
     time = '8';
-    num = Math.floor(time/duration);
+    num = Math.floor(time / player.duration());
     crright = parseInt(right,10);
     
     //makerpoint.style.left = progressControl.style.width + 'px';
