@@ -73,7 +73,8 @@
     var div, settings, img, player, progressControl, duration, moveListener, moveCancel;
     settings = extend({}, defaults, options);
     player = this;
-
+    progressControl = player.controlBar.progressControl;
+   
     (function() {
       var progressControl, addFakeActive, removeFakeActive;
       // Android doesn't support :active and :hover on non-anchor and non-button elements
@@ -138,8 +139,13 @@
       duration = player.duration();
     });
 
+    clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
+    var num = 8 / duration * clientRect.width;
+    
+    makerpoint.offset(left:"5px");
+    
     // add the thumbnail to the player
-    progressControl = player.controlBar.progressControl;
+    
     progressControl.el().appendChild(div);
     progressControl.el().appendChild(makerpoint);
 
