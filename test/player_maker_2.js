@@ -109,9 +109,12 @@
     makerbt.className = 'vjs-makerbt';
     //makerpoint.appendChild(makerbt);
     
+    var x = document.getElementsByClassName("vjs-current-time-display");
+    
     makerpoint.onclick = function()
     {
       player.currentTime(8);
+      x.innerHTML = "0.08";
     }
     
     // center the thumbnail over the cursor if an offset wasn't provided
