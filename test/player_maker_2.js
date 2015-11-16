@@ -115,6 +115,7 @@
     {
       player.currentTime(8);
       x.innerHTML = "0.08";
+      player.play();
     }
     
     // center the thumbnail over the cursor if an offset wasn't provided
