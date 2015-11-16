@@ -141,7 +141,7 @@
 
     clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
     right = (clientRect.width || clientRect.right) + pageXOffset;
-    du = duration*2;
+    du = player.duration();;
     time = 8;
     num = time*2;
     crright = parseInt(right,10);
