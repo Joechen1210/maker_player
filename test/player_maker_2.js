@@ -141,14 +141,13 @@
     var sec_num = parseInt(duration, 10);
     makerpoint.style.left = time + '%';
     
-    var dutext = document.getElementsByClassName("vjs-control-text");
-    var tts = dutext.innerText;
+    var dutext = document.getElementsByClassName("vjs-control-text").innerText;;
     
     makerpoint.onclick = function()
     {
       player.currentTime(8);
       x.innerHTML = "0.08";
-       alert("  duration: " + duration + "  du: " + tts + "  sec: " + sec_num);
+       alert("  duration: " + duration + "  du: " + dutext + "  sec: " + sec_num);
       //player.play();
       parseInt
     }
