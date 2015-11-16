@@ -140,9 +140,9 @@
     });
 
     //clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
-    //var num = 8 / duration * clientRect.width;
+    var num = 8 / duration * clientRect.width;
     
-    makerpoint.offset({left:"5px"});
+    makerpoint.style.left = "10px";
     
     // add the thumbnail to the player
     
