@@ -142,8 +142,8 @@
     clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
     right = (clientRect.width || clientRect.right) + pageXOffset;
     du = duration;
-    time = '8';
-    num = Math.floor(time / player.duration());
+    time = 8;
+    num = Math.floor(time / duration);
     crright = parseInt(right,10);
     
     //makerpoint.style.left = progressControl.style.width + 'px';
