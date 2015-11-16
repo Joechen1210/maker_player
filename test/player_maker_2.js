@@ -103,6 +103,9 @@
     img.className = 'vjs-thumbnail';
     extend(img.style, settings['0'].style);
     
+    makerpoint = document.createElement('div');
+    makerpoint.className = 'vjs-makerpoint';
+    
     // center the thumbnail over the cursor if an offset wasn't provided
     if (!img.style.left && !img.style.right) {
       img.onload = function() {
