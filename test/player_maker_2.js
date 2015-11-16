@@ -126,19 +126,7 @@
     // add the thumbnail to the player
     progressControl = player.controlBar.progressControl;
     progressControl.el().appendChild(div);
-    
-     for (tt in settings)
-  {
-      makerpoint = document.createElement('div');
-      makebt = document.createElement('button');
-      makerpoint.className = 'vjs-makerpoint';
-      makerpoint.appendChild('makebt');
-      }
-    
-    
- 
-    
-    
+
     moveListener = function(event) {
       var mouseTime, time, active, left, setting, pageX, right, width, halfWidth, pageXOffset, clientRect;
       active = 0;
