@@ -137,7 +137,7 @@
     right = (clientRect.width || clientRect.right) + pageXOffset;
     time = (8/29)*100;
     crright = Math.floor(clientRect.width*time);
-    time2 = (8/player.duration())*100;
+    time2 = (8 / parseInt(player.duration()))*100;
     var sec_num = parseInt(duration, 10);
     makerpoint.style.left = time + '%';
     
