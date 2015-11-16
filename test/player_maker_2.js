@@ -107,7 +107,12 @@
     makerpoint.className = 'vjs-makerpoint';
     makerbt = document.createElement('button');
     makerbt.className = 'vjs-makerbt';
-    makerpoint.appendChild(makerbt);
+    //makerpoint.appendChild(makerbt);
+    
+    makerpoint.onclick = function()
+    {
+      player.currentTime(8);
+    }
     
     // center the thumbnail over the cursor if an offset wasn't provided
     if (!img.style.left && !img.style.right) {
