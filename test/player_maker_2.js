@@ -141,12 +141,12 @@
 
     clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
     right = (clientRect.width || clientRect.right) + pageXOffset;
-    var num = 8 / duration * clientRect.width;
+    var num = (8/duration)*clientRect.width;
     
     //makerpoint.style.left = progressControl.style.width + 'px';
     makerpoint.onclick = function()
     {
-      alert("width: " + clientRect.width + "  height: " + clientRect.height + "  right: " + clientRect.right + "  left: " + clientRect.left + "  time: " + settings.time + "  duration: " + duration);
+      alert("width: " + clientRect.width + "  height: " + clientRect.height + "  right: " + clientRect.right + "  left: " + clientRect.left + "  num: " + num + "  duration: " + duration);
     }
     // add the thumbnail to the player
     
