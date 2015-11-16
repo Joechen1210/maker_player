@@ -127,17 +127,18 @@
     progressControl = player.controlBar.progressControl;
     progressControl.el().appendChild(div);
     
-    for (time in settings) 
-    {
-      var makerpoint = document.createElement('div'),
+     for (tt in settings)
+  {
+      makerpoint = document.createElement('div');
       makebt = document.createElement('button');
       makerpoint.className = 'vjs-makerpoint';
-      makebt.className = 'vjs-makerbt';
       makerpoint.appendChild('makebt');
       }
     
     
-
+ 
+    
+    
     moveListener = function(event) {
       var mouseTime, time, active, left, setting, pageX, right, width, halfWidth, pageXOffset, clientRect;
       active = 0;
