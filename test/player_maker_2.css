@@ -1,17 +1,4 @@
 /* a wrapper element that tracks the mouse vertically */
-.vjs-makerpoint
-{
-    width: 10px;
-    height: 10px;
-    cursor: pointer;
-    -webkit-appearance: none;
-    border: solid;
-    border-radius: 100%;
-    background-color: white;
-    position: absolute;
-    bottom: 7px;
-}
-
 .vjs-thumbnail-holder {
   position: absolute;
   left: -1000px;
