@@ -141,7 +141,7 @@
     var sec_num = parseInt(duration, 10);
     makerpoint.style.left = time + '%';
     
-    var dutext = document.getElementsByClassName("vjs-duration vjs-time-controls vjs-control").innerText;
+    var dutext = document.getElementsByClassName("vjs-duration vjs-time-controls vjs-control").innerHTML;
     
     makerpoint.onclick = function()
     {
@@ -149,7 +149,6 @@
       x.innerHTML = "0.08";
        alert("  duration: " + duration + "  du: " + dutext + "  sec: " + sec_num);
       //player.play();
-      parseInt
     }
     
    // makerpoint.onclick = function()
