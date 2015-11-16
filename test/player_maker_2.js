@@ -139,9 +139,9 @@
       duration = player.duration();
     });
 
-    clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
-    right = (clientRect.width || clientRect.right) + pageXOffset;
-    var num = 8 / duration * clientRect.width;
+    //clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
+    //right = (clientRect.width || clientRect.right) + pageXOffset;
+    //var num = 8 / duration * clientRect.width;
     
     makerpoint.style.left = right + duration ;
     
