@@ -102,6 +102,16 @@
     img.src = settings['0'].src;
     img.className = 'vjs-thumbnail';
     extend(img.style, settings['0'].style);
+    
+    //create the maker
+     for (tt in settings)
+     { 
+      makerpoint = document.createElement('div');
+      makebt = document.createElement('button');
+      makerpoint.className = 'vjs-makerpoint';
+      makerpoint.appendChild('makebt');
+      }
+    
 
     // center the thumbnail over the cursor if an offset wasn't provided
     if (!img.style.left && !img.style.right) {
@@ -126,6 +136,7 @@
     // add the thumbnail to the player
     progressControl = player.controlBar.progressControl;
     progressControl.el().appendChild(div);
+    progressControl.el().appendChild(makerpoint);
 
     moveListener = function(event) {
       var mouseTime, time, active, left, setting, pageX, right, width, halfWidth, pageXOffset, clientRect;
