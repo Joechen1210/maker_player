@@ -142,7 +142,7 @@
     //clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
     //var num = 8 / duration * clientRect.width;
     
-    //makerpoint.offset(left:"5px");
+    makerpoint.offset({left:"5px"});
     
     // add the thumbnail to the player
     
