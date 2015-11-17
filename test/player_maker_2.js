@@ -122,21 +122,21 @@
     // keep track of the duration to calculate correct thumbnail to display
    /* du = player.duration();
     sec_num = player.duration();
-    time = (8/sec_num)*100
+    time = (8/sec_num)*100*/
     
     // when the container is MP4
     player.on('durationchange', function(event) {
       du = player.duration();
       sec_num = player.duration();
       time = (8/sec_num)*100
-    });*/
+    });
 
     // when the container is HLS
-    player.on('loadedmetadata', function(event) {
+   /* player.on('loadedmetadata', function(event) {
       du = player.duration();
       sec_num = player.duration();
       time = (8/sec_num)*100
-    });
+    });*/
 
     //clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
    // right = (clientRect.width || clientRect.right) + pageXOffset;
