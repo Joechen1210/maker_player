@@ -75,7 +75,7 @@
     player = this;
     //progressControl = player.controlBar.progressControl;
     player.ready(function(){
-    for(time in settings)
+    for(i = 0; i < settings.length; i++)
     {
     progressControl = player.controlBar.progressControl;
     makerpoint = document.createElement('div');
@@ -84,26 +84,26 @@
     makerbt.className = 'vjs-makerbt';
     
     sec_num = player.duration();
-    time1 = (time/sec_num)*100
+    time1 = (settings[i]/sec_num)*100
     makerpoint.style.left = time1 + '%';
     
     // when the container is MP4
     player.on('durationchange', function(event) {
       sec_num = player.duration();
-      time1 = (time/sec_num)*100
+      time1 = (settings[i]/sec_num)*100
       makerpoint.style.left = time1 + '%';
     });
 
     // when the container is HLS
     player.on('loadedmetadata', function(event) {
       sec_num = player.duration();
-      time1 = (time/sec_num)*100
+      time1 = (settings[i]/sec_num)*100
       makerpoint.style.left = time1 + '%';
     });
     
     makerpoint.onclick = function()
     {
-      player.currentTime(time);
+      player.currentTime(settings[i]);
      // x.innerHTML = "0.08";
      alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ settings.time);
     }
