@@ -144,9 +144,9 @@
    // right = (clientRect.width || clientRect.right) + pageXOffset;
    // time = (8/29)*100;
     //crright = Math.floor(clientRect.width*time);
-    //time2 = 8/du;
+    time2 = 27.5;
    
-    makerpoint.style.left = '27%';
+    makerpoint.style.left = time2 + '%';
   
     
     makerpoint.onclick = function()
