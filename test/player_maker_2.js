@@ -136,7 +136,7 @@
     right = (clientRect.width || clientRect.right) + pageXOffset;
     time = (8/29)*100;
     crright = Math.floor(clientRect.width*time);
-    time2 = (8 / parseInt(player.duration()))*100;
+    time2 = (8/du);
     var sec_num = parseInt(du, 10);
     makerpoint.style.left = time + '%';
     
@@ -146,7 +146,7 @@
     {
       player.currentTime(8);
       x.innerHTML = "0.08";
-       alert("  du: " + du + " type: " + typeof(du) + "  sec: " + sec_num + " type:" + typeof(sec_num));
+       alert("  du: " + du + " type: " + typeof(du) + "  sec: " + time2 + " type:" + typeof(time2));
       //player.play();
     }
     
