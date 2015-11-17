@@ -76,8 +76,8 @@
     //progressControl = player.controlBar.progressControl;
     player.ready(function(){
     //alert(setting.length);
-    for(i = 0; i < settings.length; i++)
-    {
+   // for(i = 0; i < settings.length; i++)
+    //{
     progressControl = player.controlBar.progressControl;
     makerpoint = document.createElement('div');
     makerpoint.className = 'vjs-makerpoint';
@@ -85,32 +85,32 @@
     makerbt.className = 'vjs-makerbt';
     
     sec_num = player.duration();
-    time1 = (settings[i]/sec_num)*100
+    time1 = (8/sec_num)*100
     makerpoint.style.left = time1 + '%';
     
     // when the container is MP4
     player.on('durationchange', function(event) {
       sec_num = player.duration();
-      time1 = (settings[i]/sec_num)*100
+      time1 = (8/sec_num)*100
       makerpoint.style.left = time1 + '%';
     });
 
     // when the container is HLS
     player.on('loadedmetadata', function(event) {
       sec_num = player.duration();
-      time1 = (settings[i]/sec_num)*100
+      time1 = (8/sec_num)*100
       makerpoint.style.left = time1 + '%';
     });
     
     makerpoint.onclick = function()
     {
-      player.currentTime(settings[i]);
+      player.currentTime(8);
      // x.innerHTML = "0.08";
-     alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ settings.time);
+     alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ settings[0]);
     }
     progressControl.el().appendChild(makerpoint);
     
-    }
+    //}
     
     });
    
