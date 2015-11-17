@@ -146,7 +146,7 @@
     //crright = Math.floor(clientRect.width*time);
     time2 = 27.5;
    
-    makerpoint.style.left = time2 + '%';
+    makerpoint.style.left = time + '%';
   
     
     makerpoint.onclick = function()
