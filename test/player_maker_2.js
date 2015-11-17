@@ -122,17 +122,20 @@
     // keep track of the duration to calculate correct thumbnail to display
     du = player.duration();
     sec_num = player.duration();
+    time = (8/sec_num)*100
     
     // when the container is MP4
     player.on('durationchange', function(event) {
       du = player.duration();
       sec_num = player.duration();
+      time = (8/sec_num)*100
     });
 
     // when the container is HLS
     player.on('loadedmetadata', function(event) {
       du = player.duration();
       sec_num = player.duration();
+      time = (8/sec_num)*100
     });
 
     //clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
@@ -149,7 +152,7 @@
       player.currentTime(8);
       x.innerHTML = "0.08";
        //alert("  du: " + du + " type: " + typeof(du) + "  time: " + time2 + " type:" + typeof(time2) + " sec: " + sec_num + " type: " + typeof(sec_num));
-         alert(" sec: " + sec_num + " type: " + typeof(sec_num));
+         alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time));
       //player.play();
     }
     
