@@ -236,7 +236,7 @@
       }
       for(var i=0; i < Object.keys(settings).length; i++)
       {
-        if(setting[i].time == active)
+        if(settings[i].time == active)
         {
           setting = settings[i];
           if (setting.src && img.src != setting.src) {
