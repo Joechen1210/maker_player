@@ -118,7 +118,7 @@
         img.style.left = -(img.naturalWidth / 2) + 'px';
       };
     }
-
+  
     // keep track of the duration to calculate correct thumbnail to display
    du = player.duration();
     sec_num = player.duration();
@@ -129,6 +129,7 @@
       du = player.duration();
       sec_num = player.duration();
       time = (8/sec_num)*100
+      return time;
     });
 
     // when the container is HLS
@@ -136,6 +137,7 @@
       du = player.duration();
       sec_num = player.duration();
       time = (8/sec_num)*100
+      return time;
     });
 
     //clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
