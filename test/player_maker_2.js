@@ -73,7 +73,47 @@
     var div, settings, img, player, progressControl, duration, moveListener, moveCancel, du, num, time, crright;
     settings = extend({}, defaults, options);
     player = this;
+    //progressControl = player.controlBar.progressControl;
+    palyer.ready( function(){
+      
     progressControl = player.controlBar.progressControl;
+     
+    makerpoint = document.createElement('div');
+    makerpoint.className = 'vjs-makerpoint';
+    makerbt = document.createElement('button');
+    makerbt.className = 'vjs-makerbt';
+    
+    sec_num = player.duration();
+    time = (8/sec_num)*100
+    makerpoint.style.left = time + '%';
+    
+    // when the container is MP4
+    player.on('durationchange', function(event) {
+      sec_num = player.duration();
+      time = (8/sec_num)*100
+      makerpoint.style.left = time + '%';
+    });
+
+    // when the container is HLS
+    player.on('loadedmetadata', function(event) {
+      sec_num = player.duration();
+      time = (8/sec_num)*100
+      makerpoint.style.left = time + '%';
+      return time;
+    });
+    
+    makerpoint.onclick = function()
+    {
+      player.currentTime(8);
+      x.innerHTML = "0.08";
+       //alert("  du: " + du + " type: " + typeof(du) + "  time: " + time2 + " type:" + typeof(time2) + " sec: " + sec_num + " type: " + typeof(sec_num));
+         alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time));
+      //player.play();
+    }
+    progressControl.el().appendChild(makerpoint);
+    
+    });
+   
    
     (function() {
       var progressControl, addFakeActive, removeFakeActive;
@@ -104,13 +144,13 @@
     img.className = 'vjs-thumbnail';
     extend(img.style, settings['0'].style);
     
-    makerpoint = document.createElement('div');
+    /*makerpoint = document.createElement('div');
     makerpoint.className = 'vjs-makerpoint';
     makerbt = document.createElement('button');
     makerbt.className = 'vjs-makerbt';
-    //makerpoint.appendChild(makerbt);
+    makerpoint.appendChild(makerbt);
     
-    var x = document.getElementsByClassName("vjs-current-time-display");
+    var x = document.getElementsByClassName("vjs-current-time-display");*/
   
     // center the thumbnail over the cursor if an offset wasn't provided
     if (!img.style.left && !img.style.right) {
@@ -121,51 +161,51 @@
   
     // keep track of the duration to calculate correct thumbnail to display
    du = player.duration();
-    sec_num = player.duration();
-    time = (8/sec_num)*100
-    makerpoint.style.left = time + '%';
+    //sec_num = player.duration();
+    //time = (8/sec_num)*100
+    //makerpoint.style.left = time + '%';
     
     // when the container is MP4
     player.on('durationchange', function(event) {
       du = player.duration();
-      sec_num = player.duration();
-      time = (8/sec_num)*100
-      makerpoint.style.left = time + '%';
-      return time;
+      //sec_num = player.duration();
+      //time = (8/sec_num)*100
+      //makerpoint.style.left = time + '%';
+      //return time;
     });
 
     // when the container is HLS
     player.on('loadedmetadata', function(event) {
       du = player.duration();
-      sec_num = player.duration();
-      time = (8/sec_num)*100
-      makerpoint.style.left = time + '%';
-      return time;
+      //sec_num = player.duration();
+      //time = (8/sec_num)*100
+      //makerpoint.style.left = time + '%';
+      //return time;
     });
 
     //clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
    // right = (clientRect.width || clientRect.right) + pageXOffset;
    // time = (8/29)*100;
     //crright = Math.floor(clientRect.width*time);
-    time2 = 27.5;
+   // time2 = 27.5;
     
-    makerpoint.onclick = function()
+    /*makerpoint.onclick = function()
     {
       player.currentTime(8);
       x.innerHTML = "0.08";
        //alert("  du: " + du + " type: " + typeof(du) + "  time: " + time2 + " type:" + typeof(time2) + " sec: " + sec_num + " type: " + typeof(sec_num));
          alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time));
       //player.play();
-    }
+    }*/
     
    // makerpoint.onclick = function()
   //  {
     //  alert("width: " + clientRect.width + "  height: " + clientRect.height + "  right: " + clientRect.right + "  left: " + clientRect.left + "  crright: " + crright + "  num: " + num + "  duration: " + typeof(duration) + "  du: " + du);
   //  }
     // add the thumbnail to the player
-    
+    progressControl = player.controlBar.progressControl;
     progressControl.el().appendChild(div);
-    progressControl.el().appendChild(makerpoint);
+    //progressControl.el().appendChild(makerpoint);
 
     moveListener = function(event) {
       var mouseTime, time, active, left, setting, pageX, right, width, halfWidth, pageXOffset, clientRect;
