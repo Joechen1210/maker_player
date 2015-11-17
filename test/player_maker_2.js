@@ -123,12 +123,14 @@
    du = player.duration();
     sec_num = player.duration();
     time = (8/sec_num)*100
+    makerpoint.style.left = time + '%';
     
     // when the container is MP4
     player.on('durationchange', function(event) {
       du = player.duration();
       sec_num = player.duration();
       time = (8/sec_num)*100
+      makerpoint.style.left = time + '%';
       return time;
     });
 
@@ -137,6 +139,7 @@
       du = player.duration();
       sec_num = player.duration();
       time = (8/sec_num)*100
+      makerpoint.style.left = time + '%';
       return time;
     });
 
@@ -145,9 +148,6 @@
    // time = (8/29)*100;
     //crright = Math.floor(clientRect.width*time);
     time2 = 27.5;
-   
-    makerpoint.style.left = time + '%';
-  
     
     makerpoint.onclick = function()
     {
