@@ -120,17 +120,16 @@
     }
 
     // keep track of the duration to calculate correct thumbnail to display
-    duration = player.duration();
     du = player.duration();
     
     // when the container is MP4
     player.on('durationchange', function(event) {
-      duration = player.duration();
+      du = player.duration();
     });
 
     // when the container is HLS
     player.on('loadedmetadata', function(event) {
-      duration = player.duration();
+      du = player.duration();
     });
 
     clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
@@ -138,7 +137,7 @@
     time = (8/29)*100;
     crright = Math.floor(clientRect.width*time);
     time2 = (8 / parseInt(player.duration()))*100;
-    var sec_num = parseInt(duration, 10);
+    var sec_num = parseInt(du, 10);
     makerpoint.style.left = time + '%';
     
     var dutext = document.getElementsByClassName("vjs-duration vjs-time-controls vjs-control").innerHTML;
@@ -147,7 +146,7 @@
     {
       player.currentTime(8);
       x.innerHTML = "0.08";
-       alert("  duration: " + duration + " type: " + typeof(duration) + "  du: " + du + " type: " + typeof(du) + "  sec: " + sec_num + " type:" + typeof(sec_num));
+       alert("  du: " + du + " type: " + typeof(du) + "  sec: " + sec_num + " type:" + typeof(sec_num));
       //player.play();
     }
     
@@ -182,7 +181,7 @@
       // `left` applies to the mouse position relative to the player so we need
       // to remove the progress control's left offset to know the mouse position
       // relative to the progress control
-      mouseTime = Math.floor((left - progressControl.el().offsetLeft) / progressControl.width() * duration);
+      mouseTime = Math.floor((left - progressControl.el().offsetLeft) / progressControl.width() * du);
       for (time in settings) {
         if (mouseTime > time) {
           active = Math.max(active, time);
