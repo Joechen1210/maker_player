@@ -139,9 +139,9 @@
     div.className = 'vjs-thumbnail-holder';
     img = document.createElement('img');
     div.appendChild(img);
-    img.src = settings['0'].src;
+    img.src = settings[0].src;
     img.className = 'vjs-thumbnail';
-    extend(img.style, settings['0'].style);
+    extend(img.style, settings[0].style);
     
     /*makerpoint = document.createElement('div');
     makerpoint.className = 'vjs-makerpoint';
@@ -234,14 +234,19 @@
           active = Math.max(active, time);
         }
       }
-      setting = settings[active];
-      if (setting.src && img.src != setting.src) {
-        img.src = setting.src;
+      for(var i=0; i < Object.keys(settings).length; i++)
+      {
+        if(setting[i].time == active)
+        {
+          setting = settings[i];
+          if (setting.src && img.src != setting.src) {
+          img.src = setting.src;
+          }
+          if (setting.style && img.style != setting.style) {
+           extend(img.style, setting.style);
+          }
+        }
       }
-      if (setting.style && img.style != setting.style) {
-        extend(img.style, setting.style);
-      }
-
       width = getVisibleWidth(img, setting.width || settings[0].width);
       halfWidth = width / 2;
 
