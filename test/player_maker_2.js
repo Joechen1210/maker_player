@@ -132,21 +132,21 @@
       du = player.duration();
     });
 
-    clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
-    right = (clientRect.width || clientRect.right) + pageXOffset;
-    time = (8/29)*100;
-    crright = Math.floor(clientRect.width*time);
-    time2 = 8/du;
+    //clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
+   // right = (clientRect.width || clientRect.right) + pageXOffset;
+   // time = (8/29)*100;
+    //crright = Math.floor(clientRect.width*time);
+    //time2 = 8/du;
     sec_num = player.duration();
-    makerpoint.style.left = time + '%';
-    
-    var dutext = document.getElementsByClassName("vjs-duration vjs-time-controls vjs-control").innerHTML;
+    //makerpoint.style.left = time + '%';
+  
     
     makerpoint.onclick = function()
     {
       player.currentTime(8);
       x.innerHTML = "0.08";
-       alert("  du: " + du + " type: " + typeof(du) + "  time: " + time2 + " type:" + typeof(time2) + " sec: " + sec_num + " type: " + typeof(sec_num));
+       //alert("  du: " + du + " type: " + typeof(du) + "  time: " + time2 + " type:" + typeof(time2) + " sec: " + sec_num + " type: " + typeof(sec_num));
+         alert(" sec: " + sec_num + " type: " + typeof(sec_num));
       //player.play();
     }
     
