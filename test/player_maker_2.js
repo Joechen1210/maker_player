@@ -74,7 +74,7 @@
     settings = extend({}, defaults, options);
     player = this;
     //progressControl = player.controlBar.progressControl;
-    palyer.ready( function(){
+    player.ready( function(){
       
     progressControl = player.controlBar.progressControl;
      
