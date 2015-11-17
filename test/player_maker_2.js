@@ -75,7 +75,7 @@
     player = this;
     //progressControl = player.controlBar.progressControl;
     player.ready(function(){
-    //alert(setting.length);
+    var jsondata = JSON.parse(settings);
    // for(i = 0; i < settings.length; i++)
     //{
     progressControl = player.controlBar.progressControl;
@@ -106,7 +106,7 @@
     {
       player.currentTime(8);
      // x.innerHTML = "0.08";
-     alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ Object.keys(settings).length);
+     alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ jsondata[0].time);
     }
     progressControl.el().appendChild(makerpoint);
     
