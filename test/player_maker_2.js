@@ -137,7 +137,7 @@
     time = (8/29)*100;
     crright = Math.floor(clientRect.width*time);
     time2 = 8/du;
-    sec_num = parseInt(du, 10);
+    sec_num = du;
     makerpoint.style.left = time + '%';
     
     var dutext = document.getElementsByClassName("vjs-duration vjs-time-controls vjs-control").innerHTML;
