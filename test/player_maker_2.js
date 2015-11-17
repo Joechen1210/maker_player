@@ -121,15 +121,18 @@
 
     // keep track of the duration to calculate correct thumbnail to display
     du = player.duration();
+    sec_num = player.duration();
     
     // when the container is MP4
     player.on('durationchange', function(event) {
       du = player.duration();
+      sec_num = player.duration();
     });
 
     // when the container is HLS
     player.on('loadedmetadata', function(event) {
       du = player.duration();
+      sec_num = player.duration();
     });
 
     //clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
@@ -137,7 +140,7 @@
    // time = (8/29)*100;
     //crright = Math.floor(clientRect.width*time);
     //time2 = 8/du;
-    sec_num = player.duration();
+   
     //makerpoint.style.left = time + '%';
   
     
