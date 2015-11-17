@@ -75,29 +75,31 @@
     player = this;
     //progressControl = player.controlBar.progressControl;
     player.ready(function(){
-   // for(i = 0; i < settings.length; i++)
-    //{
+      
+    for(var i = 0; i < Object.keys(settings).length; i++)
+    {
     progressControl = player.controlBar.progressControl;
     makerpoint = document.createElement('div');
     makerpoint.className = 'vjs-makerpoint';
     makerbt = document.createElement('button');
     makerbt.className = 'vjs-makerbt';
+    time = settings[i].time;
     
     sec_num = player.duration();
-    time1 = (8/sec_num)*100
+    time1 = (time/sec_num)*100
     makerpoint.style.left = time1 + '%';
     
     // when the container is MP4
     player.on('durationchange', function(event) {
       sec_num = player.duration();
-      time1 = (8/sec_num)*100
+      time1 = (time/sec_num)*100
       makerpoint.style.left = time1 + '%';
     });
 
     // when the container is HLS
     player.on('loadedmetadata', function(event) {
       sec_num = player.duration();
-      time1 = (8/sec_num)*100
+      time1 = (time/sec_num)*100
       makerpoint.style.left = time1 + '%';
     });
     
@@ -105,11 +107,11 @@
     {
       player.currentTime(8);
      // x.innerHTML = "0.08";
-     alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ settings[1].time);
+     alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ Object.keys(settings).length);
     }
     progressControl.el().appendChild(makerpoint);
     
-    //}
+    }
     
     });
    
@@ -142,14 +144,6 @@
     img.src = settings[0].src;
     img.className = 'vjs-thumbnail';
     extend(img.style, settings[0].style);
-    
-    /*makerpoint = document.createElement('div');
-    makerpoint.className = 'vjs-makerpoint';
-    makerbt = document.createElement('button');
-    makerbt.className = 'vjs-makerbt';
-    makerpoint.appendChild(makerbt);
-    
-    var x = document.getElementsByClassName("vjs-current-time-display");*/
   
     // center the thumbnail over the cursor if an offset wasn't provided
     if (!img.style.left && !img.style.right) {
@@ -160,47 +154,18 @@
   
     // keep track of the duration to calculate correct thumbnail to display
    du = player.duration();
-    //sec_num = player.duration();
-    //time = (8/sec_num)*100
-    //makerpoint.style.left = time + '%';
+
     
     // when the container is MP4
     player.on('durationchange', function(event) {
       du = player.duration();
-      //sec_num = player.duration();
-      //time = (8/sec_num)*100
-      //makerpoint.style.left = time + '%';
-      //return time;
     });
 
     // when the container is HLS
     player.on('loadedmetadata', function(event) {
       du = player.duration();
-      //sec_num = player.duration();
-      //time = (8/sec_num)*100
-      //makerpoint.style.left = time + '%';
-      //return time;
     });
 
-    //clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
-   // right = (clientRect.width || clientRect.right) + pageXOffset;
-   // time = (8/29)*100;
-    //crright = Math.floor(clientRect.width*time);
-   // time2 = 27.5;
-    
-    /*makerpoint.onclick = function()
-    {
-      player.currentTime(8);
-      x.innerHTML = "0.08";
-       //alert("  du: " + du + " type: " + typeof(du) + "  time: " + time2 + " type:" + typeof(time2) + " sec: " + sec_num + " type: " + typeof(sec_num));
-         alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time));
-      //player.play();
-    }*/
-    
-   // makerpoint.onclick = function()
-  //  {
-    //  alert("width: " + clientRect.width + "  height: " + clientRect.height + "  right: " + clientRect.right + "  left: " + clientRect.left + "  crright: " + crright + "  num: " + num + "  duration: " + typeof(duration) + "  du: " + du);
-  //  }
     // add the thumbnail to the player
     progressControl = player.controlBar.progressControl;
     progressControl.el().appendChild(div);
