@@ -106,7 +106,7 @@
     {
       player.currentTime(8);
      // x.innerHTML = "0.08";
-     alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ settings[0]);
+     alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ settings.el().length);
     }
     progressControl.el().appendChild(makerpoint);
     
