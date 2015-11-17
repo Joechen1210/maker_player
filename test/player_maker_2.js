@@ -229,11 +229,19 @@
       // to remove the progress control's left offset to know the mouse position
       // relative to the progress control
       mouseTime = Math.floor((left - progressControl.el().offsetLeft) / progressControl.width() * du);
-      for (time in settings) {
+      /*for (time in settings) {
         if (mouseTime > time) {
           active = Math.max(active, time);
         }
-      }
+      }*/
+       for(var i=0; i < Object.keys(settings).length; i++)
+       {
+          time = settings[i].time;
+          if (mouseTime > time) {
+          active = Math.max(active, time);
+           }
+       }
+      
       for(var i=0; i < Object.keys(settings).length; i++)
       {
         if(settings[i].time == active)
