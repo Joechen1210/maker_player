@@ -120,7 +120,7 @@
     }
 
     // keep track of the duration to calculate correct thumbnail to display
-    du = player.duration();
+   /* du = player.duration();
     sec_num = player.duration();
     time = (8/sec_num)*100
     
@@ -129,7 +129,7 @@
       du = player.duration();
       sec_num = player.duration();
       time = (8/sec_num)*100
-    });
+    });*/
 
     // when the container is HLS
     player.on('loadedmetadata', function(event) {
