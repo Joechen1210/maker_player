@@ -106,9 +106,9 @@
       makerpoint.style.left = time1 + '%';
     });
     
-    makerpoint.onclick = clickevent(settings, i);
+    //makerpoint.onclick = clickevent(settings, i);
     
-      clickevent = function(settings, i) {
+      makerpoint.onclick = function(settings, i) {
        time = settings[i].time;
       player.currentTime(time);
      // x.innerHTML = "0.08";
