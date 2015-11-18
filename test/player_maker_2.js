@@ -256,7 +256,7 @@
       
       console.log( "left3:" + left );
       
-      div.style.left = left + 'px';
+      //div.style.left = left + 'px';
     };
 
     // update the thumbnail while hovering
