@@ -224,13 +224,11 @@
        {
           time = settings[i].time;
           if (mouseTime > time) {
-          active = Math.max(active, time);
+          active = Math.max(active, time) - 1;
            }
        }
        console.log( "active:" + active );
-       
-      actime = active - 1;
-      
+    
       for(var i=0; i < Object.keys(settings).length; i++)
       {
         if(settings[i].time === actime)
