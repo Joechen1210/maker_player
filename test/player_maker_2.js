@@ -202,6 +202,7 @@
       
       // find the page offset of the mouse
       left = pageX || (event.clientX + document.body.scrollLeft + document.documentElement.scrollLeft);
+      console.log( " left1: " + left + " offsetParent(progressControl.el()).getBoundingClientRect().left: " + offsetParent(progressControl.el()).getBoundingClientRect().left + " pageXOffset: " + pageXOffset);
       // subtract the page offset of the positioned offset parent
       left -= offsetParent(progressControl.el()).getBoundingClientRect().left + pageXOffset;
     
