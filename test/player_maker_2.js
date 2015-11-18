@@ -80,7 +80,8 @@
     {
     progressControl = player.controlBar.progressControl;
     makerpoint = document.createElement('div');
-    makerpoint.className = 'vjs-makerpoint';
+    makerpoint.className = 'vjs-makerpoint ';
+    makerpoint.className += time;
     makerbt = document.createElement('button');
     makerbt.className = 'vjs-makerbt';
     time = settings[i].time;
