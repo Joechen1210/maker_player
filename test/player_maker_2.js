@@ -187,17 +187,21 @@
       pageXOffset = getScrollOffset().x;
       clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
       right = (clientRect.width || clientRect.right) + pageXOffset;
-
+      
+     console.log( "clientRectright:" + right );
+     
       pageX = event.pageX;
       if (event.changedTouches) {
         pageX = event.changedTouches[0].pageX;
       }
-
+      console.log( "pagex:" + pageX );
+      
       // find the page offset of the mouse
       left = pageX || (event.clientX + document.body.scrollLeft + document.documentElement.scrollLeft);
       // subtract the page offset of the positioned offset parent
       left -= offsetParent(progressControl.el()).getBoundingClientRect().left + pageXOffset;
-
+    
+     console.log( "left:" + left );
       // apply updated styles to the thumbnail if necessary
       // mouseTime is the position of the mouse along the progress control bar
       // `left` applies to the mouse position relative to the player so we need
@@ -209,6 +213,8 @@
           active = Math.max(active, time);
         }
       }*/
+      console.log( "mouseTime:" + mouseTime );
+      
        for(var i=0; i < Object.keys(settings).length; i++)
        {
           time = settings[i].time;
@@ -232,6 +238,8 @@
       }
       width = getVisibleWidth(img, setting.width || settings[0].width);
       halfWidth = width / 2;
+      
+       console.log( "halfWidth:" + halfWidth );
 
       // make sure that the thumbnail doesn't fall off the right side of the left side of the player
       if ( (left + halfWidth) > right ) {
@@ -239,7 +247,9 @@
       } else if (left < halfWidth) {
         left = halfWidth;
       }
-
+      
+      console.log( "left2:" + left );
+      
       div.style.left = left + 'px';
     };
 
