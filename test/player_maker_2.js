@@ -32,7 +32,7 @@
       };
     },
     offsetParent = function(el) {
-      if (el.nodeName !== 'HTML' && getComputedStyle(el)('position') === 'static') {
+      if (el.nodeName !== 'HTML' && getComputedStyle(el)('position') === 'relative') {
         return offsetParent(el.offsetParent);
       }
       return el;
