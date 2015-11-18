@@ -22,7 +22,7 @@
 }
 
 .vjs-thumbnail-holder {
-  position: fixed;
+  position: absolute;
   left: -1000px;
 }
 
