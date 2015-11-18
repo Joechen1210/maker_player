@@ -108,12 +108,12 @@
     
     makerpoint.onclick = clickevent(settings, i);
     
-      function clickevent(settings, i) {
+      clickevent = function(settings, i) {
        time = settings[i].time;
       player.currentTime(time);
      // x.innerHTML = "0.08";
      alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ time);
-     }
+     };
     /*makerpoint.onclick = function()
     {
       player.currentTime(settings[i].time);
