@@ -206,7 +206,7 @@
       // subtract the page offset of the positioned offset parent
       left -= offsetParent(progressControl.el()).getBoundingClientRect().left + pageXOffset;
     
-     console.log( "left:" + left + " progressControl.el().offsetLeft: " + progressControl.el().offsetLeft + " progressControl.width() " + progressControl.width() + " du: " + du );
+     console.log( "left2:" + left + " progressControl.el().offsetLeft: " + progressControl.el().offsetLeft + " progressControl.width() " + progressControl.width() + " du: " + du );
       // apply updated styles to the thumbnail if necessary
       // mouseTime is the position of the mouse along the progress control bar
       // `left` applies to the mouse position relative to the player so we need
@@ -254,7 +254,7 @@
         left = halfWidth;
       }
       
-      console.log( "left2:" + left );
+      console.log( "left3:" + left );
       
       div.style.left = left + 'px';
     };
