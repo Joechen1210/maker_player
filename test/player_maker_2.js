@@ -126,7 +126,7 @@
     
     //makerpoint.onclick = clickevent(settings, i);
     
-      makerpoint.onclick = function(i) {
+      makerpoint.onclick = function() {
          alert("time: " + time + " i:" + i);
        /*for(var i = 0; i < Object.keys(settings).length; i++)
             {
