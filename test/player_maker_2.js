@@ -108,8 +108,7 @@
     
     makerpoint.onmouseup = clickevent(settings, i);
     
-      function clickevent (settings, i)
-      {
+      function clickevent(settings, i) {
        time = settings[i].time;
       player.currentTime(time);
      // x.innerHTML = "0.08";
