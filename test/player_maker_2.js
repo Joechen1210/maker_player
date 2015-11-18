@@ -79,12 +79,14 @@
     for(var i = 0; i < Object.keys(settings).length; i++)
     {
     progressControl = player.controlBar.progressControl;
+    time = settings[i].time;
+    
     makerpoint = document.createElement('div');
     makerpoint.className = 'vjs-makerpoint ';
     makerpoint.className += time;
     makerbt = document.createElement('button');
     makerbt.className = 'vjs-makerbt';
-    time = settings[i].time;
+    
     
     sec_num = player.duration();
     time1 = (time/sec_num)*100
