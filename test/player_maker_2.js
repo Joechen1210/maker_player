@@ -106,7 +106,7 @@
       makerpoint.style.left = time1 + '%';
     });
     
-    makerpoint.onmouseup = clickevent(settings, i);
+    makerpoint.onclick = clickevent(settings, i);
     
       function clickevent(settings, i) {
        time = settings[i].time;
