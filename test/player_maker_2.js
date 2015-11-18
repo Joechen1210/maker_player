@@ -182,7 +182,7 @@
     //progressControl.el().appendChild(makerpoint);
 
     moveListener = function(event) {
-      var mouseTime, time, active, left, setting, pageX, right, width, halfWidth, pageXOffset, clientRect;
+      var mouseTime, time, active, left, setting, pageX, right, width, halfWidth, pageXOffset, clientRect, ac;
       active = 0;
       pageXOffset = getScrollOffset().x;
       clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
@@ -225,7 +225,7 @@
           time = settings[i].time;
           if (mouseTime > time) {
           active = Math.max(active, time);
-          var ac = (active - 1);
+          ac = (active - 1);
            }
        }
        console.log( "active:" + active + " ac: " + ac);
