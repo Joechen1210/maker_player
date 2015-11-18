@@ -109,7 +109,7 @@
       makerpoint.style.left = time1 + '%';
     });
     
-     makerpoint.addEventListener ("mouseup", function () {Makerevent (makerpoint, settings)}, false);
+    /* makerpoint.addEventListener ("mouseup", function () {Makerevent (makerpoint, settings)}, false);
      
       function Makerevent (makerpoint, settings) {
             for(var i = 0; i < Object.keys(settings).length; i++)
@@ -121,16 +121,16 @@
                  alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ time);
               }
             }
-        }
+        }*/
      
     
     //makerpoint.onclick = clickevent(settings, i);
     
-      /*makerpoint.onclick = function(i) {
+      makerpoint.onclick = function(i) {
        player.currentTime(time);
      // x.innerHTML = "0.08";
      alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ time);
-     }*/
+     }
     /*makerpoint.onclick = function()
     {
       player.currentTime(settings[i].time);
