@@ -228,6 +228,7 @@
            }
        }
        console.log( "active:" + active );
+       active--;
       
       for(var i=0; i < Object.keys(settings).length; i++)
       {
