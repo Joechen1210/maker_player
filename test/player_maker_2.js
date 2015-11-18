@@ -107,14 +107,13 @@
     });
     
     //makerpoint.onmouseup = clickevent(time, sec_num);
-    makerpoint.on('mouseup', clickevent(time, sec_num));
     
-    function clickevent(time, sec_num) {
+      makerpoint.onmouseup = function()
+      {
       player.currentTime(time);
      // x.innerHTML = "0.08";
      alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ time);
-    
-    }
+     }
     /*makerpoint.onclick = function()
     {
       player.currentTime(settings[i].time);
