@@ -225,6 +225,7 @@
           time = settings[i].time;
           if (mouseTime > time) {
           active = Math.max(active, time);
+          var ac = (active - 1);
            }
        }
        console.log( "active:" + active );
