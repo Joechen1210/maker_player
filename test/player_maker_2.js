@@ -78,6 +78,7 @@
     
     player.ready(function(){
     settings = extend({}, defaults, options);
+    
     for(var i = 0; i < Object.keys(settings).length; i++)
     {
     progressControl = player.controlBar.progressControl;
@@ -126,7 +127,8 @@
     
     //makerpoint.onclick = clickevent(settings, i);
     
-      makerpoint.onclick = function() {
+      makerpoint.onclick = function(makerpoint) {
+        var id = makerpoint.id;
          alert("time: " + time + " i:" + i);
        /*for(var i = 0; i < Object.keys(settings).length; i++)
             {
