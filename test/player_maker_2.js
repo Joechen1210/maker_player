@@ -129,7 +129,7 @@
     
       makerpoint.onclick = function(makerpoint) {
         var id = makerpoint.id;
-         alert("time: " + time + " i:" + i);
+         alert(" time: " + time + " i: " + i + " id:  " + id);
        /*for(var i = 0; i < Object.keys(settings).length; i++)
             {
               if(makerpoint.id === i)
