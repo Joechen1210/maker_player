@@ -156,11 +156,11 @@
     extend(img.style, settings[0].style);
   
     // center the thumbnail over the cursor if an offset wasn't provided
-    /*if (!img.style.left && !img.style.right) {
+    if (!img.style.left && !img.style.right) {
       img.onload = function() {
-        img.style.left = -(img.naturalWidth / 2) + 'px';
+        img.style.left = (img.naturalWidth / 2) + 'px';
       };
-    }*/
+    }
   
     // keep track of the duration to calculate correct thumbnail to display
    du = player.duration();
