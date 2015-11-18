@@ -110,47 +110,20 @@
       makerpoint.style.left = time1 + '%';
     });
     
-    /* makerpoint.addEventListener ("mouseup", function () {Makerevent (makerpoint, settings)}, false);
-     
-      function Makerevent (makerpoint, settings) {
-            for(var i = 0; i < Object.keys(settings).length; i++)
-            {
-              if(makerpoint.id === i)
-              {
-                time = settings[i].time
-                player.currentTime(time);
-                 alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ time);
-              }
-            }
-        }*/
-     
+    makerpoint.addEventListener('click', makerclickevent, false);
     
-    //makerpoint.onclick = clickevent(settings, i);
-    
-      makerpoint.onclick = function() {
-        var id = makerpoint.id;
-         alert(" time: " + time + " i: " + i + " id:  " + id);
-       /*for(var i = 0; i < Object.keys(settings).length; i++)
-            {
-              if(makerpoint.id === i)
-              {
-                time = settings[i].time
-                player.currentTime(time);
-                 alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ time);
-              }
-            }*/
-     }
-    /*makerpoint.onclick = function()
-    {
-      player.currentTime(settings[i].time);
-     // x.innerHTML = "0.08";
-     alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ settings[i].time);
-    }*/
     progressControl.el().appendChild(makerpoint);
     
     }
     
+     function makerclickevent(e) {
+     var clickedItem = e.target.id;
+     alert("Hello " + clickedItem);
+     }
+    
     });
+    
+    
    
    
     (function() {
