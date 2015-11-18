@@ -106,12 +106,20 @@
       makerpoint.style.left = time1 + '%';
     });
     
-    makerpoint.onclick = function()
+    makerpoint.onmouseup = clickevent(time, sec_num);
+    
+    function clickevent(time, sec_num) {
+      player.currentTime(time);
+     // x.innerHTML = "0.08";
+     alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ time);
+    
+    }
+    /*makerpoint.onclick = function()
     {
       player.currentTime(settings[i].time);
      // x.innerHTML = "0.08";
      alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ settings[i].time);
-    }
+    }*/
     progressControl.el().appendChild(makerpoint);
     
     }
