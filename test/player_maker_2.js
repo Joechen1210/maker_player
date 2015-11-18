@@ -73,9 +73,11 @@
     var div, settings, img, player, progressControl, duration, moveListener, moveCancel, du, num, time, crright;
     settings = extend({}, defaults, options);
     player = this;
-    //progressControl = player.controlBar.progressControl;
+    progressControl = player.controlBar.progressControl;
+    progressControl..style.position = "relative";
+    
     player.ready(function(){
-      
+    settings = extend({}, defaults, options);
     for(var i = 0; i < Object.keys(settings).length; i++)
     {
     progressControl = player.controlBar.progressControl;
@@ -108,8 +110,7 @@
     
     //makerpoint.onclick = clickevent(settings, i);
     
-      makerpoint.onclick = function(settings, i) {
-       time = settings[i].time;
+      makerpoint.onclick = function(i) {
       player.currentTime(time);
      // x.innerHTML = "0.08";
      alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ time);
