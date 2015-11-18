@@ -108,7 +108,7 @@
     
     //makerpoint.onmouseup = clickevent(time, sec_num);
     
-      makerpoint.onmouseup = function()
+      makerpoint.onmouseup = function(settings)
       {
        time = settings[i].time;
       player.currentTime(time);
