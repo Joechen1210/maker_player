@@ -225,14 +225,14 @@
           time = settings[i].time;
           if (mouseTime > time) {
           active = Math.max(active, time);
-          ac = (active - 1);
+         // ac = (active - 1);
            }
        }
        console.log( "active:" + active + " ac: " + ac);
     
       for(var i=0; i < Object.keys(settings).length; i++)
       {
-        if(settings[i].time === ac)
+        if(settings[i].time === active)
         {
           setting = settings[i];
           if (setting.src && img.src != setting.src) {
