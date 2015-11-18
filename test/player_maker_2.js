@@ -85,7 +85,8 @@
     
     makerpoint = document.createElement('div');
     makerpoint.className = 'vjs-makerpoint ';
-    makerpoint.className += time;
+    makerpoint.className += 'vjs-makerpoint-' + time;
+    makerpoint.id = time;
     makerbt = document.createElement('button');
     makerbt.className = 'vjs-makerbt';
     
@@ -108,13 +109,28 @@
       makerpoint.style.left = time1 + '%';
     });
     
+     makerpoint.addEventListener ("mouseup", function () {Makerevent (makerpoint, settings)}, false);
+     
+      function Makerevent (makerpoint, settings) {
+            for(var i = 0; i < Object.keys(settings).length; i++)
+            {
+              if(makerpoint.id === i)
+              {
+                time = settings[i].time
+                player.currentTime(time);
+                 alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ time);
+              }
+            }
+        }
+     
+    
     //makerpoint.onclick = clickevent(settings, i);
     
-      makerpoint.onclick = function(i) {
-      player.currentTime(time);
+      /*makerpoint.onclick = function(i) {
+       player.currentTime(time);
      // x.innerHTML = "0.08";
      alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ time);
-     }
+     }*/
     /*makerpoint.onclick = function()
     {
       player.currentTime(settings[i].time);
