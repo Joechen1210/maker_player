@@ -93,20 +93,20 @@
     
     
     sec_num = player.duration();
-    time1 = (time/sec_num)*100
+    time1 = (time/Math.floor(sec_num))*100;
     makerpoint.style.left = time1 + '%';
     
     // when the container is MP4
     player.on('durationchange', function(event) {
       sec_num = player.duration();
-      time1 = (time/sec_num)*100
+      time1 = (time/Math.floor(sec_num))*100;
       makerpoint.style.left = time1 + '%';
     });
 
     // when the container is HLS
     player.on('loadedmetadata', function(event) {
       sec_num = player.duration();
-      time1 = (time/sec_num)*100
+      time1 = (time/Math.floor(sec_num))*100;
       makerpoint.style.left = time1 + '%';
     });
     
