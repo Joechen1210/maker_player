@@ -120,7 +120,7 @@
      var clickedItem = e.target.id;
      var t = parseInt(clickedItem);
      player.currentTime(t);
-     alert("Hello " + clickedItem);
+     //alert("Hello " + clickedItem);
      }
     
     });
