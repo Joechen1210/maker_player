@@ -106,9 +106,9 @@
       makerpoint.style.left = time1 + '%';
     });
     
-    //makerpoint.onmouseup = clickevent(time, sec_num);
+    makerpoint.onmouseup = clickevent(time, sec_num);
     
-      makerpoint.onmouseup = function(settings)
+      function clickevent (time, settings)
       {
        time = settings[i].time;
       player.currentTime(time);
