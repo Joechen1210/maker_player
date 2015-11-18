@@ -118,6 +118,8 @@
     
      function makerclickevent(e) {
      var clickedItem = e.target.id;
+     var t = parseInt(clickedItem);
+     player.currentTime(t);
      alert("Hello " + clickedItem);
      }
     
