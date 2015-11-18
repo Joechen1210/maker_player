@@ -127,8 +127,8 @@
     
     //makerpoint.onclick = clickevent(settings, i);
     
-      makerpoint.onclick = function(event) {
-        var id = event.id;
+      makerpoint.onclick = function() {
+        var id = makerpoint.id;
          alert(" time: " + time + " i: " + i + " id:  " + id);
        /*for(var i = 0; i < Object.keys(settings).length; i++)
             {
