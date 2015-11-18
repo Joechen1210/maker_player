@@ -228,11 +228,11 @@
           var ac = (active - 1);
            }
        }
-       console.log( "active:" + active );
+       console.log( "active:" + active + " ac: " + ac);
     
       for(var i=0; i < Object.keys(settings).length; i++)
       {
-        if(settings[i].time === active)
+        if(settings[i].time === ac)
         {
           setting = settings[i];
           if (setting.src && img.src != setting.src) {
