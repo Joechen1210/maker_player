@@ -108,7 +108,7 @@
     
     makerpoint.onclick = function()
     {
-      player.currentTime(time);
+      player.currentTime(settings[i].time);
      // x.innerHTML = "0.08";
      alert(" sec: " + sec_num + " type: " + typeof(sec_num) + "  time: " + time + " type: " + typeof(time) + " settingstime:  "+ Object.keys(settings).length);
     }
