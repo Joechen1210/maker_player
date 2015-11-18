@@ -74,7 +74,7 @@
     settings = extend({}, defaults, options);
     player = this;
     progressControl = player.controlBar.progressControl;
-    progressControl.style.position = "relative";
+    progressControl.style.position = 'relative';
     
     player.ready(function(){
     settings = extend({}, defaults, options);
