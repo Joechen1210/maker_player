@@ -188,7 +188,11 @@
       clientRect = offsetParent(progressControl.el()).getBoundingClientRect();
       right = (clientRect.width || clientRect.right) + pageXOffset;
       
-     console.log( "clientRectright:" + right );
+     console.log( "clientRectright:" + right + " pageXOffset: " + pageXOffset + "progressControl.el()." );
+     console.log(
+    'page: ' + event.pageX + ',' + event.pageY, 
+    'client: ' + event.clientX + ',' + event.clientY, 
+    'screen: ' + event.screenX + ',' + event.screenY)
      
       pageX = event.pageX;
       if (event.changedTouches) {
