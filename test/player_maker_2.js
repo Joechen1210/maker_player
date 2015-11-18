@@ -245,7 +245,7 @@
       width = getVisibleWidth(img, setting.width || settings[0].width);
       halfWidth = width / 2;
       
-       console.log( "halfWidth:" + halfWidth );
+       console.log(" halfWidth: " + halfWidth + " width: " + width + " setting.width: " + setting.width + " settings[0].width: " + settings[0].width + "  left: " + left + " right: " + right);
 
       // make sure that the thumbnail doesn't fall off the right side of the left side of the player
       if ( (left + halfWidth) > right ) {
