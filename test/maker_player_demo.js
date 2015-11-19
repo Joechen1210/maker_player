@@ -48,7 +48,7 @@
     makerpoint = document.createElement('div');
     makerpoint.className = 'vjs-makerpoint ';
     makerpoint.className += 'vjs-makerpoint-' + i;
-    makerpoint.id = time;
+    makerpoint.id = i;
     makerbt = document.createElement('button');
     makerbt.className = 'vjs-makerbt';
     
@@ -64,7 +64,9 @@
     
     }
     
-     // when the container is MP4
+    });
+    
+      // when the container is MP4
     player.on('durationchange', function(event) {
       var makerpoint;
        for(var i = 0; i < Object.keys(settings).length; i++)
@@ -96,6 +98,5 @@
      //alert("Hello " + clickedItem);
      }
     
-    });
   });
 })();
