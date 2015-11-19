@@ -60,13 +60,6 @@
     
     makerpoint.addEventListener('click', makerclickevent, false);
     
-     function makerclickevent(e) {
-     var clickedItem = e.target.id;
-     var t = parseInt(clickedItem);
-     player.currentTime(t);
-     //alert("Hello " + clickedItem);
-     }
-    
     progressControl.el().appendChild(makerpoint);
     
     }
@@ -84,6 +77,7 @@
       time1 = (time/Math.floor(sec_num))*100;
       makerpoint.style.left = time1 + '%';
       console.log(" No: " + i +  " duration2: " + sec_num + " left2: " + time1);
+       makerpoint.addEventListener('click', makerclickevent, false);
     }
     });
 
@@ -98,9 +92,16 @@
       time1 = (time/Math.floor(sec_num))*100;
       makerpoint.style.left = time1 + '%';
       console.log( " No: " + i + " duration3: " + sec_num + " left3: " + time1);
+       makerpoint.addEventListener('click', makerclickevent, false);
     }
     });
     
+    function makerclickevent(e) {
+     var clickedItem = e.target.id;
+     var t = parseInt(clickedItem);
+     player.currentTime(t);
+     //alert("Hello " + clickedItem);
+     }
     
   });
 })();
