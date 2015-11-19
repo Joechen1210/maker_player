@@ -1,0 +1,22 @@
+/* a wrapper element that tracks the mouse vertically */
+.vjs-makerpoint
+{
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    border: solid;
+    border-radius: 100%;
+    background-color: white;
+    border: 2px solid white;
+    position: absolute;
+    -webkit-transition-property: background-color; /* Safari */
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    bottom: 8px;
+}
+.vjs-makerpoint:hover
+{
+  background-color: blue; 
+}
