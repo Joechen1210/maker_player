@@ -10,7 +10,7 @@
     border: solid;
     border-radius: 100%;
     background-color: white;
-    border: 5px solid white;
+    border: 3px solid white;
     position: absolute;
     -webkit-transition-property: background-color; /* Safari */
     -webkit-transition-duration: 0.5s; /* Safari */
