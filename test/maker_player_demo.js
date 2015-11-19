@@ -57,24 +57,22 @@
     time1 = (time/Math.floor(sec_num))*100;
     makerpoint.style.left = time1 + '%';
     
-    console.log( " duration1: " + sec_num + " left1: " + time1);
+    console.log(" No: " + i + " duration1: " + sec_num + " left1: " + time1);
     
     // when the container is MP4
     player.on('durationchange', function(event) {
       sec_num = player.duration();
       time1 = (time/Math.floor(sec_num))*100;
       makerpoint.style.left = time1 + '%';
-      console.log( " duration2: " + sec_num + " left2: " + time1);
+      console.log(" No: " + i +  " duration2: " + sec_num + " left2: " + time1);
     });
-
-
 
     // when the container is HLS
     player.on('loadedmetadata', function(event) {
       sec_num = player.duration();
       time1 = (time/Math.floor(sec_num))*100;
       makerpoint.style.left = time1 + '%';
-      console.log( " duration3: " + sec_num + " left3: " + time1);
+      console.log( " No: " + i + " duration3: " + sec_num + " left3: " + time1);
     });
     
     makerpoint.addEventListener('click', makerclickevent, false);
