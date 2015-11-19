@@ -46,9 +46,8 @@
     console.log( " No: " + i + " time: " + time);
     
     makerpoint = document.createElement('div');
-    makerpoint.className = 'vjs-makerpoint ';
-    makerpoint.className += 'vjs-makerpoint-' + i;
-    makerpoint.id = i;
+    makerpoint.className = 'vjs-makerpoint-' + i;
+    makerpoint.id = time;
     makerbt = document.createElement('button');
     makerbt.className = 'vjs-makerbt';
     
@@ -72,7 +71,7 @@
        for(var i = 0; i < Object.keys(settings).length; i++)
     {
       time = settings[i].time;
-      makerpoint = document.getElementById(i);
+      makerpoint = document.getElementById(time);
       sec_num = player.duration();
       time1 = (time/Math.floor(sec_num))*100;
       makerpoint.style.left = time1 + '%';
@@ -87,7 +86,7 @@
        for(var i = 0; i < Object.keys(settings).length; i++)
     {
       time = settings[i].time;
-      makerpoint = document.getElementById(i);
+      makerpoint = document.getElementById(time);
       sec_num = player.duration();
       time1 = (time/Math.floor(sec_num))*100;
       makerpoint.style.left = time1 + '%';
