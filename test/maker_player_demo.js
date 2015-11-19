@@ -46,7 +46,8 @@
     console.log( " No: " + i + " time: " + time);
     
     makerpoint = document.createElement('div');
-    makerpoint.className = 'vjs-makerpoint-' + i;
+    makerpoint.className = 'vjs-makerpoint ';
+    makerpoint.className += 'vjs-makerpoint-' + i;
     makerpoint.id = time;
     makerbt = document.createElement('button');
     makerbt.className = 'vjs-makerbt';
