@@ -1,8 +1,8 @@
 /* a wrapper element that tracks the mouse vertically */
 .vjs-makerpoint
 {
-    max-width: 15px;
-    max-height: 15px;
+    max-width: 12px;
+    max-height: 12px;
     width: 70%;
     height: 70%;
     cursor: pointer;
@@ -10,7 +10,7 @@
     border: solid;
     border-radius: 100%;
     background-color: white;
-    border: 2px solid white;
+    border: 5px solid white;
     position: absolute;
     -webkit-transition-property: background-color; /* Safari */
     -webkit-transition-duration: 0.5s; /* Safari */
