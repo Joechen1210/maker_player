@@ -71,6 +71,7 @@
       var makerpoint;
        for(var i = 0; i < Object.keys(settings).length; i++)
     {
+      time = settings[i].time;
       makerpoint = document.getElementById(i);
       sec_num = player.duration();
       time1 = (time/Math.floor(sec_num))*100;
@@ -84,6 +85,7 @@
       var makerpoint;
        for(var i = 0; i < Object.keys(settings).length; i++)
     {
+      time = settings[i].time;
       makerpoint = document.getElementById(i);
       sec_num = player.duration();
       time1 = (time/Math.floor(sec_num))*100;
